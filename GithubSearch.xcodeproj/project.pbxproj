@@ -15,6 +15,7 @@
 		8415BB382459A658008DBF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8415BB372459A658008DBF34 /* Assets.xcassets */; };
 		8415BB3B2459A658008DBF34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8415BB392459A658008DBF34 /* LaunchScreen.storyboard */; };
 		8415BB45245B2509008DBF34 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415BB44245B2509008DBF34 /* Welcome.swift */; };
+		8415BB4A2462E143008DBF34 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415BB492462E143008DBF34 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8415BB3A2459A658008DBF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8415BB3C2459A658008DBF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8415BB44245B2509008DBF34 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		8415BB492462E143008DBF34 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		957E7B1282167DEC6A0B97FE /* Pods-GithubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearch/Pods-GithubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				8415BB2E2459A653008DBF34 /* AppDelegate.swift */,
 				8415BB302459A653008DBF34 /* SceneDelegate.swift */,
 				8415BB422459A6D5008DBF34 /* Controllers */,
+				8415BB482462E090008DBF34 /* Model */,
 				8415BB432459A6FA008DBF34 /* View */,
 				8415BB372459A658008DBF34 /* Assets.xcassets */,
 				8415BB392459A658008DBF34 /* LaunchScreen.storyboard */,
@@ -80,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8415BB322459A653008DBF34 /* ViewController.swift */,
-				8415BB44245B2509008DBF34 /* Welcome.swift */,
+				8415BB492462E143008DBF34 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +94,15 @@
 				8415BB342459A653008DBF34 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8415BB482462E090008DBF34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8415BB44245B2509008DBF34 /* Welcome.swift */,
+			);
+			name = Model;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		87BA5D3A7F53AD6208330243 /* Frameworks */ = {
@@ -227,6 +239,7 @@
 			files = (
 				8415BB45245B2509008DBF34 /* Welcome.swift in Sources */,
 				8415BB332459A653008DBF34 /* ViewController.swift in Sources */,
+				8415BB4A2462E143008DBF34 /* DetailViewController.swift in Sources */,
 				8415BB2F2459A653008DBF34 /* AppDelegate.swift in Sources */,
 				8415BB312459A653008DBF34 /* SceneDelegate.swift in Sources */,
 			);

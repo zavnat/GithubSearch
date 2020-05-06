@@ -31,18 +31,18 @@ struct Welcome: Codable {
 struct Item: Codable {
     let id: Int
     let nodeID, name, fullName: String
-//    let owner: Owner
-//    let itemPrivate: Bool
-//    let htmlURL: String
-//    let itemDescription: String
-//    let fork: Bool
-//    let url: String
-//    let createdAt, updatedAt, pushedAt: Date
-//    let homepage: String
-//    let size, stargazersCount, watchersCount: Int
-//    let language: String
-//    let forksCount, openIssuesCount: Int
-//    let masterBranch, defaultBranch: String
+    //   let owner: Owner
+    //    let itemPrivate: Bool
+    //    let htmlURL: String
+    //  let itemDescription: String
+    //    let fork: Bool
+    //    let url: String
+    //    let createdAt, updatedAt, pushedAt: Date
+    //    let homepage: String
+    //    let size, stargazersCount, watchersCount: Int
+    //    let language: String
+    //    let forksCount, openIssuesCount: Int
+    //    let masterBranch, defaultBranch: String
     let score: Int
 
     enum CodingKeys: String, CodingKey {

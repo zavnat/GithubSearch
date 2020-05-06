@@ -85,8 +85,22 @@ class ViewController: UITableViewController, UISearchBarDelegate{
             cell.textLabel?.text = result.fullName
         }
         
-       
         return cell
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+        performSegue(withIdentifier: "goToDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.item = results?.items[indexPath.row]
+        }
+    }
+    
 }
 
