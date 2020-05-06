@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UITableViewController, UISearchBarDelegate {
+class ViewController: UITableViewController, UISearchBarDelegate{
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -18,10 +18,13 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     var userText = ""
     
+    var results: Welcome? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        tableView.rowHeight = 80
        
     }
     
@@ -38,10 +41,9 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             guard let data = response.data else { return }
             let decoder = JSONDecoder()
             do {
-                let people = try decoder.decode(Welcome.self, from: data)
-                
-                print("count \(people.items.count)")
-                print(people)
+                self.results = try decoder.decode(Welcome.self, from: data)
+                self.tableView.reloadData()
+    
             } catch {
                 print(error.localizedDescription)
             }
@@ -70,8 +72,21 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     
     
+    //MARK: UITableView meethods
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results?.items.count ?? 1
+    }
     
-    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        
+        if let result = results?.items[indexPath.row] {
+            cell.textLabel?.text = result.fullName
+        }
+        
+       
+        return cell
+    }
 }
 
