@@ -10,10 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     var item: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.text = item?.fullName
     }
 }

@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="563.768115942029" y="166.74107142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="oVJ-ik-WLp">
             <objects>
-                <viewController id="oqQ-so-E2o" sceneMemberID="viewController">
+                <viewController id="oqQ-so-E2o" customClass="DetailViewController" customModule="GithubSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IAv-Un-3zr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="vzp-5g-d32"/>
                     </view>
                     <navigationItem key="navigationItem" id="MDe-cc-4tj"/>
+                    <connections>
+                        <outlet property="label" destination="htD-0P-eoF" id="GZj-k1-WNS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3c-MS-lM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -91,7 +91,7 @@ class ViewController: UITableViewController, UISearchBarDelegate{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
-        performSegue(withIdentifier: "goToDetail", sender: self)
+        //performSegue(withIdentifier: "goToDetail", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
