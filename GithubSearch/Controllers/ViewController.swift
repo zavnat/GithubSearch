@@ -22,8 +22,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         searchBar.delegate = self
-        
-       // requestInfo(with: "Alamofire")
+       
     }
     
     
@@ -31,22 +30,20 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     func requestInfo(with name: String){
         
         let parameters: [String : String] = [
-            "q" : name
+            "q" : name,
+            "per_page" : "10"
         ]
-        
-        Alamofire.request(URL, method: .get, parameters: parameters).responseJSON { (response) in
-            if response.result.isSuccess {
-               
-                //Use SwiftyJSON
-                if response.result.value != nil {
-                    let json: JSON = JSON(response.result.value!)
-                    
-                    for i in 0...25 {
-                        let result =  json ["items"][i]["full_name"]
-                        print(result)
-                    }
-                }
+
+        Alamofire.request(URL, method: .get, parameters: parameters).response { (response) in
+            guard let data = response.data else { return }
+            let decoder = JSONDecoder()
+            do {
+                let people = try decoder.decode(Welcome.self, from: data)
                 
+                print("count \(people.items.count)")
+                print(people)
+            } catch {
+                print(error.localizedDescription)
             }
         }
     }
@@ -59,20 +56,20 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             requestInfo(with: userText)
         }
         searchBar.resignFirstResponder()
-           
+        
         
         
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        userText = searchText
-//        print(userText)
-//        requestInfo(with: userText)
+        //        userText = searchText
+        //        print(userText)
+        //        requestInfo(with: userText)
         
     }
     
     
-        
+    
     
     
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		8415BB362459A653008DBF34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8415BB342459A653008DBF34 /* Main.storyboard */; };
 		8415BB382459A658008DBF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8415BB372459A658008DBF34 /* Assets.xcassets */; };
 		8415BB3B2459A658008DBF34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8415BB392459A658008DBF34 /* LaunchScreen.storyboard */; };
+		8415BB45245B2509008DBF34 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415BB44245B2509008DBF34 /* Welcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8415BB372459A658008DBF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8415BB3A2459A658008DBF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8415BB3C2459A658008DBF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8415BB44245B2509008DBF34 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		957E7B1282167DEC6A0B97FE /* Pods-GithubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearch/Pods-GithubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8415BB322459A653008DBF34 /* ViewController.swift */,
+				8415BB44245B2509008DBF34 /* Welcome.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -104,7 +107,6 @@
 				957E7B1282167DEC6A0B97FE /* Pods-GithubSearch.debug.xcconfig */,
 				1B205E2D6AB822939A9BA61A /* Pods-GithubSearch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8415BB45245B2509008DBF34 /* Welcome.swift in Sources */,
 				8415BB332459A653008DBF34 /* ViewController.swift in Sources */,
 				8415BB2F2459A653008DBF34 /* AppDelegate.swift in Sources */,
 				8415BB312459A653008DBF34 /* SceneDelegate.swift in Sources */,
