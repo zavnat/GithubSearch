@@ -9,12 +9,13 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var label: UILabel!
-    var item: Item?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        label.text = item?.fullName
-    }
+  @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var detailLabel: UILabel!
+  var item: Item?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    label.text = item?.fullName
+    detailLabel.text = item?.itemDescription
+  }
 }
